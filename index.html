@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Online Resume Builder</h1>
+    <p>Create Your Professional Resume Easily</p>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Enter Your Details</h2>
+      <form id="resumeForm">
+        <label for="name">Full Name *</label>
+        <input id="name" required placeholder="Enter your name">
+
+        <label for="email">Email *</label>
+        <input id="email" type="email" required placeholder="Enter your email">
+
+        <label for="phone">Phone Number</label>
+        <input id="phone" type="tel" placeholder="Enter phone number">
+
+        <label for="education">Education</label>
+        <textarea id="education" placeholder="Enter education details"></textarea>
+
+        <label for="skills">Skills</label>
+        <textarea id="skills" placeholder="Enter your skills"></textarea>
+
+        <label for="projects">Projects</label>
+        <textarea id="projects" placeholder="Enter project details"></textarea>
+
+        <label for="objective">Career Objective</label>
+        <textarea id="objective" placeholder="Enter your career objective"></textarea>
+
+        <label for="template">Choose Template</label>
+        <select id="template">
+          <option value="modern">Modern Blue</option>
+          <option value="professional">Professional Green</option>
+          <option value="classic">Classic Black</option>
+        </select>
+
+        <div class="buttons">
+          <button type="submit">Generate Resume</button>
+          <button type="button" id="saveBtn">Save Resume</button>
+          <button type="button" id="loadBtn">Load Saved Resume</button>
+          <button type="button" id="clearBtn" class="secondary">Clear Form</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel preview-panel">
+      <h2>Resume Preview</h2>
+      <article id="resumePreview" class="modern">
+        <h1 id="previewName">Your Name</h1>
+        <p id="previewContact" class="contact">Email | Phone</p>
+        <section class="resume-section"><h3>Career Objective</h3><p id="previewObjective"></p></section>
+        <section class="resume-section"><h3>Education</h3><p id="previewEducation"></p></section>
+        <section class="resume-section"><h3>Skills</h3><p id="previewSkills"></p></section>
+        <section class="resume-section"><h3>Projects</h3><p id="previewProjects"></p></section>
+      </article>
+      <button type="button" id="downloadBtn">Print / Save as PDF</button>
+    </section>
+  </main>
+
+  <footer>Online Resume Builder · HTML, CSS and JavaScript</footer>
+  <script src="script.js"></script>
+</body>
+</html>
